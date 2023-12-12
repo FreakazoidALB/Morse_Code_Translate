@@ -1,0 +1,99 @@
+/* General styles for the body */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #121212;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden; /* Prevent scrollbars from appearing */
+}
+
+/* Video styles with fading effect */
+#background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+    opacity: 0.7; /* Adjust the opacity value to control fading (0.0 to 1.0) */
+    filter: brightness(0.5); /* Adjust brightness for a faded effect (0.0 to 1.0) */
+}
+
+/* Container holding the main content */
+.parent {
+    text-align: center;
+}
+
+/* Title styling */
+.div-Title {
+    font-size: 1.5625rem; /* Equivalent to 25px */
+    margin-bottom: 20px;
+}
+
+/* Form styling */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Label styling */
+label {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+/* Input styling */
+input {
+    padding: 0.75rem; /* Equivalent to 12px */
+    font-size: 1rem;
+    margin-bottom: 20px;
+    border: none;
+    border-bottom: 2px solid #3498db;
+    background-color: #121212;
+    color: #fff;
+    transition: border-bottom 0.3s ease;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Button styling */
+button {
+    padding: 0.75rem 1.5rem; /* Equivalent to 12px 24px */
+    font-size: 1.2rem;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+/* Output box styling */
+.output-box {
+    margin-top: 20px;
+    padding: 20px;
+    border: 2px solid #2980b9;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Paragraph styling */
+p {
+    font-size: 1.2rem;
+    margin-top: 20px;
+}
+
+/* Additional styles can be added or adjusted as needed */

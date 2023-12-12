@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Morse Code Translator</title>
+    
+    <!-- Link to the external stylesheet -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css')}}">
+
+</head>
+<body> 
+    <!-- Background Video -->
+    <video autoplay muted loop playsinline id="background-video">
+        <!-- Video Sources with different resolutions -->
+        <source src="/static/video.mp4" type="video/mp4" quality="high">
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Main Content Container -->
+    <div class="parent">
+        <!-- Title Section -->
+        <div class="div-Title">
+            <h1>Morse Code Translator</h1>
+        </div>
+
+        <!-- Form Section -->
+        <div class="div-text-input">
+            <!-- Morse Code Translation Form -->
+            <form action="/translate" method="post">
+                <label for="input_text">Enter text:</label>
+                <input type="text" id="input_text" name="input_text" required>
+                <button type="submit">Translate</button>
+            </form>
+
+            <!-- Display Output if Input is provided -->
+            {% if input_text %}
+                <div class="output-box">
+                    <p>Input Text: {{ input_text }}</p>
+                    <p>Morse Code: {{ morse_code }}</p>
+                </div>
+            {% endif %}
+        </div>
+
+        <!-- Additional Output Section (if needed) -->
+        <div class="div-text-output"></div>
+    </div>
+</body>
+</html>
